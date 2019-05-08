@@ -4,12 +4,13 @@ import com.codahale.metrics.MetricRegistry
 
 class MetricsFactory implements Serializable
 {
+  public static final String COLLECTD_BEAN_NAME = "pipelines"
   private final Object metricsClazz
   private baseMetricPath
 
   MetricsFactory(metricsClazz, String nodeName, String appName){
     this.metricsClazz = metricsClazz
-    this.baseMetricPath =  MetricRegistry.name("pipelines", aggregateDynamicNodes(nodeName), appName)
+    this.baseMetricPath =  MetricRegistry.name(COLLECTD_BEAN_NAME, aggregateDynamicNodes(nodeName), appName)
   }
 
   Timer timer(String... metricPath)
