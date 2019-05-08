@@ -1,0 +1,39 @@
+group 'com.lastminute'
+version '1.0-METRICS'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.codehaus.groovy:groovy-all:2.5.6'
+  // https://mvnrepository.com/artifact/io.dropwizard.metrics/metrics-core
+  compile "io.dropwizard.metrics:metrics-core:4.0.5"
+
+  testCompile 'junit:junit:4.+'
+  testCompile 'org.hamcrest:hamcrest-library:1.+'
+}
+
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+}
+
+sourceSets{
+  main{
+    groovy{
+      srcDirs = ['src']
+    }
+  }
+  test{
+    groovy{
+      srcDirs = ['test']
+    }
+  }
+}

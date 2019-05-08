@@ -1,0 +1,6 @@
+import jenkins.metrics.api.Metrics
+
+node {
+    def metricsClosure = new integrationTest.JenkinsMetricsIT()
+    metricsClosure.recordTimerITTest(steps, Metrics)
+}

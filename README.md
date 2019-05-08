@@ -1,2 +1,6 @@
-# jenkins-pipelines-metrics
-Jenkins pipelines code and collectd configurations to enrich your metrics and measure your delivery
+# Custom Metrics for Jenkins Pipelines 
+Enlarge your metrics 😎
+
+### Contents of the repo
+
+Configuration files and code that we used to measure our software delivery KPIs 

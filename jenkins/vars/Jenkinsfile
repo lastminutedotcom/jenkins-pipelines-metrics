@@ -1,0 +1,3 @@
+node {
+   dockerImagePipeline("my-app")
+}
